@@ -74,9 +74,115 @@
           id="search"
           placeholder="Ara.."
         />
-        <br />
-        <br />
       </div>
+      <br />
+      <br />
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="Girilen email" id="email" />
+      </div>
+      <br />
+      <br />
+      <div>
+        <label for="color">renk secınız</label>
+        <input type="color" name="secılen renk" id="color" />
+      </div>
+      <br />
+      <br />
+      <div>
+        <label for="file">Dosya Secın</label>
+        <input type="file" name="secilen dosya" id="file" />
+      </div>
+      <br />
+      <br />
+      <div>
+        <label for="phone">Telefon no gırınız</label>
+        <input
+          type="tel"
+          name="Girilen telefon no"
+          id="phone"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+          placeholder="05x-xxx-xx-xx"
+        />
+      </div>
+      <br />
+      <br />
+      <div>
+        <label for="date">Tarih:</label>
+        <input
+          type="date"
+          name="Tarih"
+          id="date"
+          min="1994-05-20"
+          max="2024-05-20"
+        />
+      </div>
+      <br />
+      <br />
+      <div>
+        <label for="seker">Hangi tatlıyı seversiniz:</label>
+        <br />
+        <select name="seçilen_tatlı" id="seker" size="7" multiple>
+          <option value="Sütlaç">Sütlaç</option>
+          <option value="Keşkül">Keşkül</option>
+          <option value="Kazandibi">Kazandibi</option>
+          <option value="Aşure">Aşure</option>
+          <option value="Magnolia">Magnolia</option>
+          <option value="Güllaç">Güllaç</option>
+        </select>
+      </div>
+
+      <br />
+      <br />
+      <div>
+        <label for="seker2">Hngi tatlıyı:</label>
+        <select name="seçilen_tatlı" id="seker2" size="7" multiple>
+          <optgroup label="sütlü tatlılar">
+            <option value="Sütlaç">Sütlaç</option>
+            <option value="Keşkül">Keşkül</option>
+            <option value="Kazandibi">Kazandibi</option>
+            <option value="Aşure">Aşure</option>
+            <option value="Magnolia">Magnolia</option>
+            <option value="Güllaç">Güllaç</option>
+          </optgroup>
+          <optgroup></optgroup>
+        </select>
+      </div>
+      <br />
+      <br />
+      <div>
+        <label for="comment">Yorum giriniz..</label>
+        <textarea name="yorum" id="comment" style="resize: none"></textarea>
+      </div>
+      <br />
+      <br />
+      <div>
+        <label for="data" list="browsers" name="kullanılan browser" id="data"
+          >Browser:</label
+        ><br />
+        <datalist id="browsers">
+          <option value="Chrome"></option>
+          <option value="Yandex"></option>
+          <option value="Opera"></option>
+        </datalist>
+      </div>
+      <br />
+      <br />
+      <div>
+        <fieldset>
+          <legend>Kişisel Bilgiler</legend>
+          <br />
+          <label>Ad</label>
+          <input type="text" name="ad" id="ad" />
+          <br />
+          <label>SoyAd</label>
+          <input type="text" name="soyad" id="soyad" />
+          <br />
+        </fieldset>
+      </div>
+      <br />
+      <br />
+      <input type="reset" value="sıfırla" />
       <input type="submit" value="gönder" />
     </form>
   </body>
