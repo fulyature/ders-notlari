@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Formlar</h1>
+    <form action="result.html" method="get">
+      <div>
+        <label for="isim">Adı:</label>
+        <input
+          type="text"
+          id="isim"
+          name="Girilen isim"
+          placeholder="adınızı girin"
+        />
+        <br /><br />
+        <label for="soyisim">Soyad:</label>
+        <!-- required boş bırakamazsın -->
+        <input type="text" id="soyisim" name="Girilen soyisim" />
+        <br /><br />
+        <!-- label in for ile input un id si aynı olursa bu labellar o ınputa baglı
+            olur. label ın uzerıne gelınce ınputu actıv hale gelir -->
+      </div>
+
+      <div>
+        <label for="parola">Parola Gir</label>
+        <input type="password" name="Girilen parola" id="parola" />
+      </div>
+      <br /><br /><br />
+
+      <div>
+        <label for="">Cinsiyet</label><br />
+        <label for="gender1">Erkek</label>
+        <input type="radio" name="cinsiyet" id="gender1" value="erkek" />
+        <label for="gender2">| Kadın</label>
+        <input type="radio" name="cinsiyet" id="gender2" value="kadın" />
+        <!-- value backend de yakaladıgı yer -->
+        <br /><br />
+      </div>
+
+      <div>
+        <label for="">Favori evcil hayvanı seçin</label><br />
+        <input type="checkbox" name="animal_1" id="panda" value="panda" />
+        <label for="panda">Panda</label>
+        <input type="checkbox" name="animal_2" id="fish" value="balık" />
+        <label for="fish">Balık</label>
+        <input type="checkbox" name="animal_3" id="cat" value="kedi" />
+        <label for="cat">Kedi</label>
+      </div>
+      <br />
+      <br />
+
+      <div>
+        <label for="age">Yaş:</label>
+        <input
+          type="number"
+          name="Girilen Yaş"
+          id="age"
+          min="18"
+          placeholder="yaş giriniz.."
+        />
+        <!-- step="5" 5er 5er artırır -->
+      </div>
+      <br />
+      <br />
+      <div>
+        <label for="search">Ara:</label>
+        <input
+          type="search"
+          name="Arananılan"
+          id="search"
+          placeholder="Ara.."
+        />
+        <br />
+        <br />
+      </div>
+      <input type="submit" value="gönder" />
+    </form>
+  </body>
+</html>
