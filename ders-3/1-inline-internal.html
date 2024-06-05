@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inline internal</title>
+
+    <style>
+      img {
+        width: 350px;
+        height: 350px;
+        border: 5px solid orange;
+        border-radius: 50%;
+      }
+
+      .img-div {
+        border: 2px solid blue;
+        text-align: center;
+      }
+
+      #par1 {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 20px;
+        background-color: bisque;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 style="color: red">inline internal</h1>
+
+    <!-- 
+   * Inline CSS, HTML elementlerine style keyword'u ile eklenir.
+   * style kelimesinin ici aslinda CSS alanidir.
+   * Sadece eklenen element icin bir stillendirme gerceklestirir.
+   * Bu sebeple cok pratik bir yontem degildir.
+   * HTML kodlarini kalabaliklastirdigi icin kodun gorunumunu karmasiklastirir.
+ -->
+
+    <div class="img-div">
+      <img
+        src="https://cdn.pixabay.com/photo/2023/09/24/16/31/beetle-8273349_1280.jpg"
+        alt=""
+      />
+
+      <img src="https://picsum.photos/id/211/600/400" alt="" />
+    </div>
+
+    <p id="par1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
+      beatae voluptas. Deserunt ipsam repellendus laborum quo, obcaecati veniam
+      fugit, sapiente, libero autem harum dicta hic exercitationem. Animi odio
+      voluptatem consectetur.
+    </p>
+  </body>
+</html>

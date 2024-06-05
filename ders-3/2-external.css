@@ -1,0 +1,22 @@
+body {
+  background-color: pink;
+}
+h1 {
+  color: blue;
+  text-align: center;
+}
+#list {
+  border: 3px solid yellow;
+  list-style: none;
+  background-color: bisque;
+}
+li {
+  background-color: rgb(196, 162, 229);
+  margin: 5px;
+}
+.abc {
+  background-color: rgb(157, 80, 229);
+}
+span {
+  color: red;
+}
