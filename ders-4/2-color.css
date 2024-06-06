@@ -1,0 +1,35 @@
+.box {
+  background-color: bisque;
+  border: 2px solid black;
+  margin: 10px;
+}
+.box1 {
+  background-color: aqua;
+}
+.box2 {
+  background-color: rgb(250, 120, 40);
+}
+.box3 {
+  background-color: rgba(180, 240, 10, 0.3);
+}
+.box4 {
+  background-color: #455aef;
+}
+.box5 {
+  background-color: hsl(120, 50%, 20%);
+}
+
+.box6 {
+  background-color: hsl(120, 80%, 20%);
+}
+
+.box7 {
+  background-color: hsl(120, 100%, 20%);
+}
+.box8 {
+  background-color: hsla(120, 80%, 20%, 0.3);
+}
+
+.box9 {
+  background-color: hsla(120, 100%, 20%, 0.7);
+}

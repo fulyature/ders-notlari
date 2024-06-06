@@ -1,0 +1,10 @@
+.airbender {
+  margin: 20px;
+  padding: 20px;
+  border: 10px solid red;
+  border-bottom: 10px dotted orange;
+  border-left: 10px groove blue;
+  /* outset inset */
+  /* border-radius: 15px; */
+  border-bottom-left-radius: 50px;
+}
