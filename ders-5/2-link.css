@@ -1,0 +1,15 @@
+.link:link {
+  background-color: aqua;
+}
+.link:active {
+  background-color: red;
+}
+.linkVisit:hover {
+  background-color: pink;
+}
+.linkVisit:visited {
+  background-color: rgb(192, 255, 248);
+}
+* {
+  background-color: green;
+}
