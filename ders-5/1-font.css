@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jacquard+12&display=swap");
+@font-face {
+  font-family: "benim";
+  src: url(./Regista.ttf);
+}
+
+.par1 {
+  background-color: cadetblue;
+  font-size: 25px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.par3 {
+  font-size: 25px;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+.par4 {
+  font-family: "Jacquard 12", system-ui;
+  font-weight: 600;
+}
+.par5 {
+  font-family: "benim", "Arial";
+  font-weight: 600;
+  font-size: 45px;
+}
+.par6 {
+  font-variant: small-caps;
+}
