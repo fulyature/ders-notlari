@@ -6,3 +6,14 @@
 .inner {
   padding: 4rem;
 }
+ul {
+  list-style-image: url("./car-solid.svg");
+  list-style-position: inside;
+}
+ul li {
+  background-color: gray;
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid red;
+  border-radius: 0.6rem;
+}
