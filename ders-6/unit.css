@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+}
+/* S */
+
+body {
+  /* border: 2px solid red;
+    height: 50vh; */
+}
+
+.abs {
+  background-color: crimson;
+  width: 5cm;
+  /* height:50%  */
+}
+
+body {
+  /* background-color: orange; */
+  border: 2px solid red;
+  height: 100vh;
+}
+
+.div2 {
+  padding: 20px 0;
+  background-color: aqua;
+  width: 50%;
+  height: 200px;
+}
+
+.div3 {
+  background-color: darkgreen;
+  width: 50%;
+  height: 50%;
+}
+
+.div4 {
+  background-color: fuchsia;
+  width: 60vw;
+  height: 50%;
+}
