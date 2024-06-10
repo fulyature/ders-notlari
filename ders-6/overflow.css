@@ -1,0 +1,27 @@
+.box {
+  border: 5px solid olive;
+  margin-bottom: 4rem;
+  width: 200px;
+  height: 4rem;
+}
+.box1 {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.box3,
+.box2 {
+  overflow: auto;
+  scrollbar-color: pink blue;
+}
+.par1 {
+  background-color: yellow;
+  width: 40rem;
+}
+.box4 {
+  overflow: auto;
+}
+.box4::-webkit-scrollbar {
+  /* width: 0; */
+  /* display: none; */
+  visibility: hidden;
+}
