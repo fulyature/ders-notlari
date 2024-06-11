@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,10 +16,10 @@ body {
   padding: 20px;
 }
 .baslik1 {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "DM Serif Text", serif;
   font-size: 90px;
   text-align: center;
+  font-style: italic;
 }
 p {
   font-size: 1.5rem;
@@ -26,10 +27,12 @@ p {
 }
 .span1,
 .baslik2 {
+  font-family: "DM Serif Text", serif;
   color: red;
+  font-style: italic;
 }
 h2 {
-  padding: 25px;
+  margin: 25px 0;
 }
 .img {
   text-align: center;
