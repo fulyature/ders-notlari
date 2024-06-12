@@ -1,0 +1,44 @@
+main {
+  background-color: greenyellow;
+  width: 90%;
+  position: relative;
+}
+.box1 {
+  background-color: rgba(0, 0, 255, 0.448);
+  width: 150px;
+  height: 150px;
+}
+.box2 {
+  background-color: rgba(220, 20, 60, 0.654);
+  width: 150px;
+  height: 150px;
+  position: relative;
+  /* ilk andaki konumuma göre beni konumlandır */
+  top: 20px;
+  left: 40px;
+}
+.box3 {
+  background-color: rgba(255, 255, 0, 0.484);
+  width: 150px;
+  height: 150px;
+  /* position: fixed;
+  top: 0;
+  right: 0; */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.box4 {
+  background-color: rgba(136, 0, 255, 0.541);
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+.inside {
+  width: 55px;
+  height: 55px;
+  background-color: rgba(255, 192, 203, 0.841);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
