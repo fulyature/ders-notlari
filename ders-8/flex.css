@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  background-color: dodgerblue;
+}
+ul {
+  /* align item i duzenlerken bi height olmalı yoksa işe yaramaz */
+  height: 50vw;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+  /* align-content: center; */
+  align-content: flex-start;
+  flex-direction: row;
+
+  list-style-type: none;
+
+  gap: 0.2rem;
+}
+li {
+  padding: 1rem;
+  background-color: firebrick;
+  border: 1px solid yellow;
+  border-radius: 0.5rem;
+}

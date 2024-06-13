@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+header {
+  background-color: #3eecac;
+  background-image: linear-gradient(19deg, #3eecac 0%, #ee74e1 100%);
+  padding: 1rem;
+}
+header a img {
+  width: 60px;
+}
+header .sig-in {
+  float: right;
+  padding-top: 2rem;
+}
+
+header .sig-in a {
+  color: #74eee6;
+  text-decoration: none;
+}
+header .sig-in a:hover {
+  border-bottom: 2px solid #74eee6;
+}
+nav.stick {
+  background-color: yellow;
+
+  text-align: center;
+}
+nav.stick a {
+  text-decoration: none;
+  color: black;
+  margin: 0.8rem;
+}
+nav.stick a:hover {
+  color: white;
+}
+nav.banner {
+  position: relative;
+}
+nav.banner img {
+  width: 100%;
+}
+nav.banner .hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+nav.banner .hero h2 {
+  color: white;
+  font-size: 3rem;
+  text-shadow: 0 3px 4px black;
+}
