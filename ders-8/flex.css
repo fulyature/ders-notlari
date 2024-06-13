@@ -27,3 +27,28 @@ li {
   border: 1px solid yellow;
   border-radius: 0.5rem;
 }
+.shirink {
+  background-color: fuchsia;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.box1 {
+  background-color: rgb(254, 133, 3);
+  padding: 1rem;
+
+  flex-shrink: 0;
+  width: 40%;
+}
+.box2 {
+  background-color: rgb(106, 255, 0);
+  padding: 1rem;
+  width: 40%;
+  flex-shrink: -1;
+}
+.box3 {
+  background-color: rgb(255, 0, 0);
+  padding: 1rem;
+  width: 40%;
+  flex-shrink: 2;
+}
