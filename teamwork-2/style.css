@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container,
+.container2,
+.container3,
+.container4 {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+.container {
+  background-image: url(img/pexels-nida-kurt-5079840-10026862.jpg);
+}
+.container2 {
+  background-image: url(img/pexels-photo-9306410.jpeg);
+}
+.container3 {
+  background: lightblue url(img/pexels-photo-8398380.jpeg) no-repeat fixed
+    center;
+}
+.container4 {
+  background-image: url(img/pexels-photo-8398380.jpeg);
+}
+.photo,
+.para {
+  background-color: white;
+}
