@@ -1,0 +1,120 @@
+@import "./theme.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* background-color: var(--grey-2); */
+  font-family: var(--ff-roboto);
+}
+.container {
+  /* border: 2px solid red; */
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+nav img {
+  width: 200px;
+}
+
+button {
+  padding: 1rem 1.2rem;
+  white-space: nowrap;
+  /* bu çok onemlı butonları sıkıstırmıyor */
+
+  border: 2px solid var(--orange-dark);
+  border-radius: 5px;
+  font-family: var(--ff-yeon);
+  margin: 1rem 0.5rem;
+  font-size: var(--fs-lg);
+}
+button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.btn-light {
+  background-color: var(--white);
+}
+.btn-dark {
+  background-color: var(--red-dark);
+  color: var(--white);
+}
+header.hero {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+header.hero h1,
+p {
+  line-height: var(--line-h-xl);
+}
+.section-text {
+  flex: 2;
+}
+.section-img {
+  flex: 1;
+}
+.section-img img {
+  width: 100%;
+  min-width: 300px;
+}
+main .card {
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 20px;
+  box-shadow: var(--shadow-light);
+  margin: 2rem;
+}
+main .card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+main article {
+  flex: 1;
+  border: 2px solid rgb(115, 0, 255);
+}
+main .card img {
+  width: 100%;
+}
+@media screen and (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: cneter;
+  }
+  .section-btn {
+    width: 250px;
+  }
+  header.hero {
+    flex-direction: column;
+  }
+  main .card {
+    flex-direction: column;
+  }
+  nav img {
+    width: 250px;
+  }
+  main .card:nth-child(even) {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 400px) {
+  .section-btn {
+    display: flex;
+    flex-direction: column;
+  }
+  .career-btn button {
+    text-align: center;
+  }
+}

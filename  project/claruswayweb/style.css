@@ -1,0 +1,6 @@
+:root {
+  --yesil: rgb(170, 210, 40);
+}
+body {
+  background-color: var(--yesil);
+}
