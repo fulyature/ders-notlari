@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 2500px;
+  width: 100%;
+  border: 2px solid red;
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+}
+.product-card {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+/* .wrapper {
+  display: flex;
+  flex-direction: column;
+} */
+img {
+  min-width: 25rem;
+  width: 65rem;
+  object-fit: cover;
+}
+.sag {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid pink;
+  background-color: yellow;
+  gap: 2rem;
+  justify-content: center;
+}
