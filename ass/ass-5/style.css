@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(
+    to bottom right,
+    #4716f0,
+    #d616f0,
+    #8f16f0,
+    #2e40f0,
+    #f00095,
+    #9b32f0
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+header {
+  text-align: center;
+  padding: 2rem;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 20px;
+  width: 90%;
+  margin: auto;
+  max-width: 1240px;
+}
+.content {
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  border: 1px solid white;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+.content1 {
+  grid-column: span 2;
+}
+
+.content6 {
+  grid-column: span 2;
+}
+iframe,
+img {
+  height: 300px;
+  object-fit: cover;
+}
+article {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 2em 0 0 0;
+  position: absolute;
+  bottom: 1rem;
+}
+p {
+  color: black;
+  flex-grow: 1;
+  font-weight: 600;
+  line-height: 1.1rem;
+}
+a {
+  text-decoration: none;
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .content1 {
+    grid-column: span 1;
+  }
+  .content6 {
+    grid-column: span 1;
+  }
+}
+
+@media screen and (max-width: 792px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .content1 {
+    grid-column: span 1;
+  }
+  .content6 {
+    grid-column: span 1;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .content1 {
+    grid-column: span 1;
+  }
+  .content6 {
+    grid-column: span 1;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .content1 {
+    grid-column: span 1;
+  }
+  .content6 {
+    grid-column: span 1;
+  }
+}

@@ -1,0 +1,29 @@
+.container {
+  display: grid;
+  border: 2px solid;
+  grid-template-columns: repeat(7, 10rem);
+  grid-template-rows: repeat(5, 100px) 30px;
+}
+.content1 {
+  background-color: silver;
+  grid-area: 2/1/4/2;
+}
+.content2 {
+  background-image: url("https://picsum.photos/200/300?grayscale");
+  grid-area: 1/2/3/4;
+  background-position: center;
+  background-size: cover;
+}
+.content3 {
+  grid-area: 1/4/3/6;
+  background-color: rgba(211, 211, 86, 0.505);
+}
+.content4 {
+  grid-area: 1/4/6/6;
+  background-image: url("https://picsum.photos/seed/picsum/200/300");
+  background-position: center;
+  background-size: cover;
+}
+.conten5 {
+  background-color: rgba(196, 220, 255, 0.895);
+}
