@@ -5,14 +5,43 @@
 }
 .container {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  max-width: 1000px;
+  height: 200vh;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr) 100px;
+  grid-template-rows: 1fr 2fr 4fr 1fr;
+  grid-gap: 20px;
   grid-template-areas:
-    "header header header header header header header"
-    "sidebar main aside"
-    "sidebar main aside"
-    "footer footer footer";
+    "header header header header "
+    "sidebar1 sidebar2 sidebar3 aside"
+    "main main main aside"
+    "footer footer footer footer";
 }
 header {
   grid-area: header;
+  background-color: #b3e396;
+}
+footer {
+  grid-area: footer;
+  background-color: #96e3b2;
+}
+.small1 {
+  grid-area: sidebar1;
+  background-color: #96e3cc;
+}
+.small2 {
+  grid-area: sidebar2;
+  background-color: #9fd67d;
+}
+.small3 {
+  grid-area: sidebar3;
+  background-color: #96e0e3;
+}
+aside {
+  grid-area: aside;
+  background-color: #b7e3c7;
+}
+main {
+  grid-area: main;
+  background-color: #b3e396;
 }

@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: rgba(211, 216, 216, 0.208);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container {
+  display: flex;
+  width: 90%;
+  height: 90%;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  border-radius: 8px;
+  align-items: center;
+}
+h2 span {
+  background-color: blue;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  margin-left: 5px;
+}
+article {
+  font-family: "Poppins", sans-serif;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+article h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+}
+article h3 {
+  font-size: 19px;
+  color: #393838;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.product-info {
+  font-weight: bolder;
+}
+article p {
+  font-size: 1rem;
+  color: #555555;
+}
+
+.img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.img img {
+  max-width: 100%;
+  height: auto;
+}
+.right {
+  padding: 2rem;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+
+  /* align-items: center; */
+  gap: 1rem;
+}
+.str {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+.storage {
+  color: #393838;
+}
+.btn-wrapper button {
+  width: 80px;
+  height: 40px;
+  background-color: #b2b2b2;
+  border-radius: 5px;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  margin: 10px 0px;
+}
+button:hover {
+  background-color: blue;
+  color: white;
+}
+.add button {
+  font-weight: 500px;
+  font-size: 17px;
+  border: none;
+  padding: 10px;
+
+  font-weight: bolder;
+}
+.add {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    height: 600px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+}
