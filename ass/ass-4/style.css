@@ -13,6 +13,7 @@ body {
 }
 .container {
   display: flex;
+  justify-content: center;
   width: 90%;
   height: 90%;
   background-color: #fff;
@@ -114,12 +115,12 @@ button:hover {
   flex-direction: row;
   justify-content: space-between;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   .container {
     height: 600px;
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
   .container {
     display: flex;
     flex-direction: column;
