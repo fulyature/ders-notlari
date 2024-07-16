@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+}
+.container {
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.bg {
+  background-image: url(images/bg.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  /* background-position: center; */
+  position: absolute;
+  z-index: -3;
+  background-attachment: fixed;
+}
+.trees {
+  z-index: 3;
+  background-image: url(images/trees.png);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: 100% 100%;
+  position: absolute;
+}
+.leaf1,
+.leaf2,
+.leaf3,
+.leaf4,
+.leaf5,
+.leaf6 {
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: moveDown 3s linear infinite;
+}
+.leaf1 {
+  background-image: url(images/leaf_01.png);
+  background-position: 20px -10px;
+  position: absolute;
+}
+.leaf2 {
+  background-image: url(images/leaf_02.png);
+  background-position: 220px -10px;
+}
+.leaf3 {
+  background-image: url(images/leaf_03.png);
+  background-position: 420px -10px;
+}
+.leaf4 {
+  background-image: url(images/leaf_01.png);
+  background-position: 52% 10px;
+}
+.leaf5 {
+  background-image: url(images/leaf_02.png);
+  background-position: 72% 10px;
+}
+.leaf6 {
+  background-image: url(images/leaf_03.png);
+  background-position: 90% -10px;
+}
+
+.content {
+  z-index: 4;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 380px;
+  height: 340px;
+  border-radius: 1.5rem;
+  border: 2px solid rgba(178, 165, 165, 0.327);
+  color: #a52a2a;
+  backdrop-filter: blur(18px);
+  padding: 1rem;
+  position: absolute;
+  gap: 1rem;
+}
+
+input {
+  height: 50px;
+  width: 100%;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #a52a2a;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 15px;
+}
+button {
+  background-color: #a52a2a;
+  color: white;
+  border: none;
+  height: 50px;
+  width: 100%;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.forgetPass {
+  display: flex;
+  justify-content: space-between;
+}
+.forgetPass a {
+  text-decoration: none;
+}
+.girl {
+  width: 100%;
+  height: 100%;
+  background-image: url(images/girl.png);
+  z-index: 3;
+  position: absolute;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 20% 40%;
+  animation: left-move 8s linear infinite;
+}
+@keyframes moveDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+.content {
+  z-index: 4;
+}
+@keyframes left-move {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}

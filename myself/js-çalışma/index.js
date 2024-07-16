@@ -104,7 +104,7 @@
 // console.log(`yaşınız ${yasHesapla(abc)}`);
 //
 //
-//**Silindirin hacmi bul */
+//************************Silindirin hacmi bul */
 //
 //
 // const hacim = (r, h) => {
@@ -114,7 +114,7 @@
 // console.log(`hacim: ${hacim(1, 1).toFixed(3)}`);
 //
 //
-//**Hesap makinesi örneği */
+//*********************Hesap makinesi örneği */
 //
 //
 // const add = (a, b) => a + b;
@@ -158,7 +158,7 @@
 // );
 //
 //
-//*faktöriel
+//***************faktöriel*********/
 //
 //
 // const fakto = (n) => {
@@ -170,7 +170,30 @@
 // };
 
 // const number = +prompt("sayıyı gırınız");
-// console.log(`girilen sayının faktörieli = ${fakto(number)}`);
+
+// if (number <= 0){
+//   console.log("0 dan büyük sayı giriniz");
+// }else console.log(`girilen sayının faktörieli = ${fakto(number)}`);
+//
+//
+//
+//
+//
+//***************faktöriel*********/
+//
+//
+const fakto = (n) => {
+  if (n <= 1) {
+    return 1;
+  } else {
+    return (n *= fakto(n - 1));
+  }
+};
+const number = +prompt("sayıyı gırınız");
+
+if (number <= 0) {
+  console.log("0 dan büyük sayı giriniz");
+} else console.log(`girilen sayının faktörieli = ${fakto(number)}`);
 //
 //
 //**RECURSİVE */
@@ -252,9 +275,9 @@ tersCevir("fulya");
 //**Polindrom Sayı MADAM,, ANA */
 //
 //
-const polindromKelime = (kelime, tersCevir) =>
-  tersCevir(kelime) === kelime
-    ? console.log("polindrom")
-    : console.log("polindrom değildir");
-polindromKelime("madam", tersCevir);
-polindromKelime("fulya", tersCevir);
+// const polindromKelime = (kelime, tersCevir) =>
+//   tersCevir(kelime) === kelime
+//     ? console.log("polindrom")
+//     : console.log("polindrom değildir");
+// polindromKelime("madam", tersCevir);
+// polindromKelime("fulya", tersCevir);
