@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bg {
+  background-image: url(images/bg.jpg);
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  position: absolute;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+.trees {
+  background-image: url(images/trees.png);
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  z-index: 3;
+  position: absolute;
+}
+
+.leaf {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+  background-repeat: no-repeat;
+  animation: moveDown 4s linear infinite;
+}
+
+.leaf1 {
+  background-image: url(images/leaf_01.png);
+  background-position: 5% -10px;
+}
+.leaf2 {
+  background-image: url(images/leaf_02.png);
+  background-position: 30% -10px;
+  animation-delay: 2s;
+}
+.leaf3 {
+  background-image: url(images/leaf_03.png);
+  background-position: 40% -10px;
+  animation-delay: 3s;
+}
+.leaf4 {
+  background-image: url(images/leaf_01.png);
+  background-position: 50% 10px;
+  animation-delay: 4s;
+}
+.leaf5 {
+  background-image: url(images/leaf_02.png);
+  background-position: 70% 10px;
+  animation-delay: 5s;
+}
+.leaf6 {
+  background-image: url(images/leaf_03.png);
+  background-position: 90% 10px;
+}
+.girl {
+  background-image: url(images/girl.png);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-size: 20% 40%;
+  background-repeat: no-repeat;
+  position: absolute;
+  /* top: 35%; */
+  background-position: right;
+  animation: leftMove 8s linear infinite;
+}
+.content {
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 380px;
+  height: 340px;
+  position: absolute;
+  text-align: center;
+  border: 2px solid rgba(178, 165, 165, 0.327);
+  backdrop-filter: blur(18px);
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+h1 {
+  color: #a52a2a;
+}
+input {
+  height: 50px;
+  width: 100%;
+  font-size: 20px;
+  color: #a52a2a;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 15px;
+}
+button {
+  color: white;
+  background-color: #a52a2a;
+  height: 50px;
+  width: 100%;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+.forget-pass {
+  display: flex;
+  justify-content: space-between;
+}
+.forget-pass a {
+  color: #a52a2a;
+  text-decoration: none;
+}
+@keyframes moveDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+@keyframes leftMove {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
