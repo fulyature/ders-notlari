@@ -14,6 +14,15 @@
 //   result = result + abc[i];
 // }
 // console.log(result);
+//
+// const text = "clarusway";
+// const arr = text.split("").reverse().join("");
+// console.log(arr);
+//bu stringi ters yazadır
+//
+//
+//
+
 function tersYaz(abc) {
   let result = "";
 
