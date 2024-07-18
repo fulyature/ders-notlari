@@ -362,3 +362,64 @@ console.log(top2(3, 2));
 const salaries = [40000, 30000, 20000, 100000];
 const toplamMaas = salaries.reduce((toplam, maas) => toplam + maas, 0);
 console.log(toplamMaas);
+//
+//
+//
+//
+//ÖRNEKLER
+const pen = {};
+pen.ink = "blue";
+if (pen["ink"]) {
+  console.log(`color is ${pen["ink"]}`);
+} else console.log("undefineed");
+
+const myObj = {
+  course: "Clarus",
+};
+myObj.course = "clarısway";
+console.log(myObj["course"]);
+//
+///
+const myArr = [1, 2, 5, 6, 7, 3, 4];
+const newArr1 = myArr;
+myArr.sort();
+
+const numArr = newArr1.forEach((item, index) => item);
+console.log(numArr);
+//
+//?????????????????????????*
+//
+
+console.log("Clarusway".endsWith("way"));
+console.log("hello".replace("l", "r"));
+//
+let myName = "Anthoney Harold";
+myName = myName.slice(8);
+console.log(myName);
+myName.toLowerCase();
+console.log(myName);
+////////////////////?????
+const multiply = (num1, num2) => {
+  return num1 * num2;
+};
+const result = multiply(3, 5);
+console.log(result);
+//////
+function message(username) {
+  console.log(`hello ${username}`);
+}
+message(); ////hello undefined
+//
+const msg1 = greet();
+//const msg2 = greet2();
+function greet() {
+  return "Hello";
+}
+const greet2 = function () {
+  return "Helllo";
+};
+//
+function sayHello() {
+  console.log("Hello World");
+}
+sayHello();
