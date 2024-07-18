@@ -182,18 +182,18 @@
 //***************faktöriel*********/
 //
 //
-const fakto = (n) => {
-  if (n <= 1) {
-    return 1;
-  } else {
-    return (n *= fakto(n - 1));
-  }
-};
-const number = +prompt("sayıyı gırınız");
+// const fakto = (n) => {
+//   if (n <= 1) {
+//     return 1;
+//   } else {
+//     return (n *= fakto(n - 1));
+//   }
+// };
+// const number = +prompt("sayıyı gırınız");
 
-if (number <= 0) {
-  console.log("0 dan büyük sayı giriniz");
-} else console.log(`girilen sayının faktörieli = ${fakto(number)}`);
+// if (number <= 0) {
+//   console.log("0 dan büyük sayı giriniz");
+// } else console.log(`girilen sayının faktörieli = ${fakto(number)}`);
 //
 //
 //**RECURSİVE */
@@ -249,14 +249,14 @@ if (number <= 0) {
 //
 //
 
-function tersCevir(kelime) {
-  let tersKelime = "";
-  for (let i = kelime.length - 1; i >= 0; i--) {
-    tersKelime += kelime[i];
-  }
-  return tersKelime;
-}
-tersCevir("fulya");
+// function tersCevir(kelime) {
+//   let tersKelime = "";
+//   for (let i = kelime.length - 1; i >= 0; i--) {
+//     tersKelime += kelime[i];
+//   }
+//   return tersKelime;
+// }
+// tersCevir("fulya");
 //
 //
 // function tersYaz(abc) {
@@ -281,3 +281,84 @@ tersCevir("fulya");
 //     : console.log("polindrom değildir");
 // polindromKelime("madam", tersCevir);
 // polindromKelime("fulya", tersCevir);
+//
+//
+//
+//
+//
+//TODO:
+//*-------------------------------------------------------
+//* SORU: ogrenciler dizisinde ogrenci isimleri saklanmaktadir.
+//* ogrencileri aramamizi saglayacak ve aranilan ogrenciden
+//* ne kadar sayida bulunuldugunu ana programa dondurecek bir
+//* fonksiyon yaziniz. Eger aranilan isimde bir ogrenci yok ise
+//* fonksiyon "ogrenci bulunamadi" dondurulmelidir.
+//*--------------------------------------------------------
+//
+//
+const ogrenciler = ["Zeynep", "Fulya", "Yunus", "Zeynep", "Begüm"];
+function search(ad) {
+  let adet = 0;
+  for (let i of ogrenciler) {
+    if (ad === i) {
+      adet++;
+    }
+  }
+  return adet > 0
+    ? console.log(`${ad} ${adet} tane bulundu`)
+    : console.log(`${ad} bulunamadı`);
+}
+search("Zeynep");
+//
+//
+//
+
+const newArr = ogrenciler.map((name) => name.toLocaleUpperCase());
+console.log(newArr);
+//
+//
+////?-------------- ÖRNEK -------------------
+//? macBookTL dizisindeki rakamlarin Euro ve dolar
+//? karsiliklarini hesaplatarak yeni dizelere kaydediniz
+
+const macBookTL = [90000, 75000, 60000, 40000, 30000];
+
+const euro = 36.29;
+const dolar = 33.06;
+
+const macBookEuro = macBookTL.map((fiyat) => Math.trunc(fiyat / euro));
+console.log(macBookEuro);
+
+const macBookDolar = macBookTL.map((fiyat) => Math.trunc(fiyat / dolar));
+console.log(macBookDolar);
+//
+//
+//
+//*            FILTER METHOD
+//* =======================================
+//?-------------- ÖRNEK -------------------
+//? maasi 50000 den büyük olanları yeni bir dizide toplayınız
+const maaslar = [90000, 75000, 60000, 40000, 30000];
+const yeniDizi = maaslar.filter((maas) => maas >= 50000);
+console.log(yeniDizi);
+//
+//? ORNEK: maasi 50000'den az olanları tespit edip %20 zam yapalım ve bunları yeni bir dizide toplayalım (orjinal diziyi degistirmeden)
+const zamliDizi = maaslar
+  .filter((maas) => maas < 50000)
+  .map((map) => map * 1.2);
+console.log(zamliDizi);
+//////////////////////////////////////
+let top1 = (a, b) => a + b;
+console.log(top1(3, 2));
+let top2 = (a, b) => {
+  return a + b;
+};
+console.log(top2(3, 2));
+/////////////////////////////////////
+//* =======================================
+//*           REDUCE
+//* =======================================
+
+const salaries = [40000, 30000, 20000, 100000];
+const toplamMaas = salaries.reduce((toplam, maas) => toplam + maas, 0);
+console.log(toplamMaas);
