@@ -34,6 +34,9 @@ function tersYaz(abc) {
 }
 
 console.log(tersYaz("fulya"));
+//
+//
+
 function areAnagrams(str1, str2) {
   // Temizleme ve düzenleme işlemi için bir yardımcı fonksiyon
   function cleanString(str) {
