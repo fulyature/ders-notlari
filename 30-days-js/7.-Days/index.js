@@ -273,3 +273,368 @@ function findMax1(a, b, c) {
 }
 
 console.log(findMax1(-9, -1, 7));
+//
+//
+//
+//***********LEVEL 2 */
+//
+//
+//2.soru Quadratic equation is calculated as follows: ax2 + bx + c = 0. Write a function which calculates value or values of a quadratic equation, solveQuadEquation.
+//
+function solveQuadEquation(a = 1, b = 0, c = 0) {
+  const discriminant = b * b - 4 * a * c;
+  const result = {};
+
+  if (discriminant > 0) {
+    const root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+    const root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+    result.roots = [root1, root2];
+  } else if (discriminant === 0) {
+    const root = -b / (2 * a);
+    result.roots = [root];
+  } else {
+    result.message = "No real roots";
+  }
+
+  return result;
+}
+
+console.log(solveQuadEquation()); // { roots: [0] }
+console.log(solveQuadEquation(1, 4, 4)); // { roots: [-2] }
+console.log(solveQuadEquation(1, -1, -2)); // { roots: [2, -1] }
+console.log(solveQuadEquation(1, 7, 12)); // { roots: [-3, -4] }
+console.log(solveQuadEquation(1, 0, -4)); // { roots: [2, -2] }
+console.log(solveQuadEquation(1, -1, 0)); // { roots: [1, 0] }
+
+//
+//
+//
+//3.soru Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
+function printArray(item) {
+  for (let i = 0; i < item.length; i++) {
+    console.log(item[i]);
+  }
+}
+
+const myArray = [1, 2, 3, 4];
+
+printArray(myArray); // 1 2 3 4
+//
+//
+//
+//4. soru Write a function name showDateTime which shows time in this format: 08/01/2020 04:08 using the Date object.
+
+//showDateTime()
+//08/01/2020 04:08
+function showDateTime() {
+  const now = new Date();
+  console.log(now);
+
+  const day = ("0" + now.getDate()).slice(-2);
+
+  console.log(day);
+
+  const month = ("0" + now.getMonth()).slice(-2);
+  console.log(month);
+  const year = now.getFullYear();
+  console.log(year);
+
+  const hour = now.getHours();
+  console.log(hour);
+  const min = now.getMinutes();
+  console.log(min);
+  const format = `${day}/${month}/${year} ${hour}:${min} `;
+  console.log(format);
+}
+showDateTime();
+//
+//
+//
+//5.soru Declare a function name swapValues. This function swaps value of x to y.
+function swapValues(a, b) {
+  const x = b;
+  const y = a;
+  console.log(`x=>${y} , y=>${x}`);
+}
+swapValues(1, 2);
+//
+//
+//
+//6.soru Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array (don't use method).
+function reverseArray(item) {
+  const bos = [];
+  for (let i = item.length - 1; i >= 0; i--) {
+    bos.push(item[i]);
+  }
+  return bos;
+}
+dizi = ["elma", "armut", "muz"];
+console.log(reverseArray(dizi));
+//
+//
+//
+//7. soru Declare a function name capitalizeArray. It takes array as a parameter and it returns the - capitalizedarray.
+function capitalizeArray(item) {
+  const bos = [];
+  for (let i = 0; i <= item.length - 1; i++) {
+    bos.push(item[i].toUpperCase());
+  }
+  return bos;
+}
+console.log(capitalizeArray(dizi));
+//
+//
+//8. soru Declare a function name addItem. It takes an item parameter and it returns an array after adding the item
+
+let items = [];
+function addItem(item) {
+  items.push(item);
+  return items;
+}
+console.log(addItem("kiraz"));
+console.log(addItem("çilek"));
+//
+//
+let arrow = (item) => {
+  items.push(item);
+  return items;
+};
+console.log(arrow("süt"));
+//
+//
+//9.soru Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item
+const dizi1 = ["fulya", "yunus", "zeynep"];
+function removeItem(index) {
+  if (index >= 0 && index < dizi1.length) {
+    dizi1.splice(index, 1);
+  } else {
+    console.log("Geçersiz indeks");
+  }
+  return dizi1;
+}
+console.log(removeItem(1));
+// console.log(removeItem(0));
+// console.log(removeItem(5));
+//
+//
+//10. soru Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
+function sumOfNumbers(a, b) {
+  let sum = 0;
+  for (let i = a; i <= b; i++) {
+    result = sum += i;
+  }
+  return result;
+}
+console.log(sumOfNumbers(1, 7));
+//
+//
+//11. soru Declare a function name sumOfOdds. It takes a number parameter and it adds all the odd numbers in that - range.
+
+function sumOfOdds(a, b) {
+  let sum = 0;
+  for (let i = a; i <= b; i++) {
+    if (i % 2 !== 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+console.log(sumOfOdds(1, 3));
+//
+//
+//12. soru Declare a function name sumOfEven. It takes a number parameter and it adds all the even numbers in that - range.
+function sumOfEven(a, b) {
+  let sum = 0;
+  for (let i = a; i <= b; i++) {
+    if (i % 2 == 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+console.log(sumOfEven(1, 3));
+//
+//
+//13. soru Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+function evensAndOdds(a, b) {
+  let counteven = 0;
+  let countodd = 0;
+
+  for (let i = a; i <= b; i++) {
+    if (i % 2 == 0) {
+      counteven++;
+    }
+    if (i % 2 !== 0) {
+      countodd++;
+    }
+  }
+  console.log(`The number of odss are ${countodd}`);
+  console.log(`The number of even are ${counteven}`);
+  return counteven, countodd;
+}
+evensAndOdds(1, 3);
+//
+//
+//14. soru Write a function which takes any number of arguments and return the sum of the arguments
+
+function sum(...sayilar) {
+  return sayilar.reduce((a, b) => a + b);
+}
+console.log(sum(1, 2, 3));
+console.log(sum(1, 2, 3, 10));
+//
+//2. yol
+function sum2(...sayilar) {
+  let toplam = 0;
+  for (let i of sayilar) {
+    toplam += i;
+  }
+  return toplam;
+}
+console.log(sum2(1, 3, 6));
+//
+//
+//15. soru Writ a function which generates a randomUserIp.
+function randomUserIp() {
+  return Math.trunc(Math.random() * 6);
+}
+console.log(randomUserIp());
+//
+//
+//17. soru Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
+const randomHexaNumberGenerator = () => {
+  const hexChars = "0123456789ABCDEF";
+  let hexNumber = "#";
+
+  for (let i = 0; i < 6; i++) {
+    const randomIndex = Math.floor(Math.random() * hexChars.length);
+    hexNumber += hexChars[randomIndex];
+  }
+
+  return hexNumber;
+};
+
+console.log(randomHexaNumberGenerator());
+//
+//18.soru Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
+const character =
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+const userIdGenerator = () => {
+  let id = "";
+  for (let i = 0; i < 7; i++) {
+    const randomindex = Math.floor(Math.random() * character.length);
+    id += character[randomindex];
+  }
+  return id;
+};
+console.log(userIdGenerator());
+//
+//
+//************LEVEL 3 */
+//
+//1. soru Modify the userIdGenerator function. Declare a function name userIdGeneratedByUser. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated.
+
+// userIdGeneratedByUser()
+// 'kcsy2
+// SMFYb
+// bWmeq
+// ZXOYh
+// 2Rgxf
+// '
+// userIdGeneratedByUser()
+// '1GCSgPLMaBAVQZ26
+// YD7eFwNQKNs7qXaT
+// ycArC5yrRupyG00S
+// UbGxOFI7UXSWAyKN
+// dIV0SSUTgAdKwStr
+// '
+// function userIdGeneratedByUser() {
+//   const num = +prompt("karakter sayısını girin");
+//   const adet = +prompt("kaç adet oluşturulsun");
+//   let ids = "";
+//   for (let j = 0; j < adet; j++) {
+//     let id = "";
+//     for (let i = 0; i < num; i++) {
+//       const randomindex = Math.floor(Math.random() * adet);
+//       id += character[randomindex];
+//     }
+//     ids += id + "\n";
+//   }
+//   return ids;
+// }
+// console.log(userIdGeneratedByUser());
+//
+//
+//2. soru Write a function name rgbColorGenerator and it generates rgb colors.
+function rgbColorGenerator() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r},${g},${b})`;
+}
+console.log(rgbColorGenerator());
+//
+//
+//2. yol
+function rgbColorGenerator() {
+  const randomValue = () => Math.floor(Math.random() * 256);
+  return `rgb(${randomValue()},${randomValue()},${randomValue()})`;
+}
+
+console.log(rgbColorGenerator());
+//
+//
+//3.yol
+function rgbColorGenerator() {
+  const randomValue = () => Math.floor(Math.random() * 256);
+  const rgbMatrix = [randomValue(), randomValue(), randomValue()];
+  return `rgb(${rgbMatrix.join(",")})`;
+}
+
+console.log(rgbColorGenerator());
+//
+
+//3. soru Write a function arrayOfHexaColors which return any number of hexadecimal colors in an array.
+
+function arrayOfHexaColors(num) {
+  hexArr = [];
+
+  const randomHexaNumberGenerator = () => {
+    const hexChars = "0123456789ABCDEF";
+    let hexNumber = "#";
+
+    for (let i = 0; i < 6; i++) {
+      const randomIndex = Math.floor(Math.random() * hexChars.length);
+      hexNumber += hexChars[randomIndex];
+    }
+
+    return hexNumber;
+  };
+
+  for (let i = 0; i < num; i++) {
+    hexArr.push(randomHexaNumberGenerator());
+  }
+  return hexArr;
+}
+console.log(arrayOfHexaColors(5));
+//
+//
+//4. soru Write a function arrayOfRgbColors which return any number of RGB colors in an array.
+
+function arrayOfRgbColors(num) {
+  rgbArr = [];
+  const rgbColor = () => {
+    const random = () => Math.trunc(Math.random() * 256);
+
+    return `rgb(${random()} ${random()} ${random()})`;
+  };
+
+  for (let i = 0; i < num; i++) {
+    rgbArr.push(rgbColor());
+  }
+  return rgbArr;
+}
+console.log(arrayOfRgbColors(9));
+//
+//
+//5. soru Write a function convertHexaToRgb which converts hexa color to rgb and it returns an rgb color.s
