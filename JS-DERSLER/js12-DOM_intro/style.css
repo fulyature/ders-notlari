@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+header {
+  background-color: #282c34;
+  color: #61dafb;
+  padding: 10px;
+  text-align: center;
+}
+.section {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.movie-list {
+  margin-top: 20px;
+}
+.movie-item {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.highlight {
+  background-color: #1dcb82;
+  font-weight: bold;
+  border: 2px solid red;
+}
+
+.interstellar {
+  background-color: pink;
+}

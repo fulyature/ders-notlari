@@ -248,7 +248,7 @@ const newStudent = studentList.push({
   },
   languages: ["C#", "Python", "Ruby"],
 });
-
+console.log(studentList);
 //İsim,username,telefon
 ///*********************************iç içe destructuring yapabiliriz 2. örnege bak */
 // const newList = [...studentList, newStudent];

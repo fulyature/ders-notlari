@@ -162,7 +162,7 @@ const updatedUsers = {
 };
 
 console.log(updatedUsers);
-//5. sor get all keys
+//5. soru get all keys
 const allKeys = [];
 for (i in users) {
   allKeys.push(i);
@@ -172,3 +172,63 @@ console.log(allKeys);
 const allValues = Object.values(users);
 
 console.log(allValues);
+//7. Use the countries object to print a country name, capital, populations and languages.
+
+const countries = {
+  Turkey: {
+    capital: "Ankara",
+    population: 82000000,
+    languages: ["Turkish"],
+  },
+  Germany: {
+    capital: "Berlin",
+    population: 83000000,
+    languages: ["German"],
+  },
+  Canada: {
+    capital: "Ottawa",
+    population: 37000000,
+    languages: ["English", "French"],
+  },
+};
+
+for (let i in countries) {
+  if (countries.hasOwnProperty(i)) {
+    const { capital, population, languages } = countries[i];
+    console.log(`Country: ${i}`);
+    console.log(`Capital: ${i}`);
+  }
+}
+
+//**********************************************************************************************
+const fulya = {
+  name: "fulya",
+  soyad: "okdem",
+  yas: 30,
+};
+// const fulyaName = fulya.name;
+// const soyadı = fulya.soyad;
+// console.log(soyadı);
+
+// const { name, soyad, yas } = fulya;
+// console.log(soyad);
+//**********************************************************************************************
+//
+//
+//
+//**LEVEL 3 */
+
+//1. Create an object literal called personAccount. It has firstName, lastName, incomes, expenses properties and it has totalIncome, totalExpense, accountInfo,addIncome, addExpense and accountBalance methods. Incomes is a set of incomes and its description and expenses is a set of incomes and its description.
+
+const personAccount = {
+  firstName: "John",
+  lastName: "Doe",
+  incomes: [
+    { description: "Salary", amount: 3000 },
+    { description: "Freelance", amount: 1500 },
+  ],
+  expenses: [
+    { description: "Rent", amount: 1000 },
+    { description: "Groceries", amount: 300 },
+  ],
+};

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Movie DOM Selectors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="moviesHeader">Movies</h1>
+    </header>
+    <main>
+      <section class="section add-movie">
+        <h2 class="add-new">Add New Movie</h2>
+        <input id="movie-input" type="text" />
+        <input id="add-btn" type="button" value="Add Movie" />
+        <div></div>
+      </section>
+      <section class="section movie-list">
+        <h2>Movie List</h2>
+        <ul id="movie-ul">
+          <li id="inception" class="movie-item">Inception</li>
+          <li id="interstellar" class="movie-item interstellar">
+            Interstellar
+          </li>
+          <li id="matrix" class="movie-item">The Matrix</li>
+          <li id="tenet" class="movie-item">Tenet</li>
+          <li id="avatar" class="movie-item avatar">Avatar</li>
+        </ul>
+      </section>
+    </main>
+    <!-- <script src="./1-DOM_intro.js"></script> -->
+    <script src="./2-Dom_manipulation.js"></script>
+  </body>
+</html>

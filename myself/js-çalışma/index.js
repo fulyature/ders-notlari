@@ -423,3 +423,367 @@ function sayHello() {
   console.log("Hello World");
 }
 sayHello();
+let person = {
+  firstName: "John",
+  lastName: "Doe",
+};
+
+let hasAge = person.hasOwnProperty("age"); // false
+console.log(hasAge);
+//
+//
+//DESTRUCTURİNG
+const note = {
+  id: 1,
+  title: "my first note",
+  date: "01/02/2024",
+};
+const { id, title, date } = note;
+console.log(id, title, date);
+//
+//
+const note2 = {
+  id: 1,
+  title: "My first note",
+  date: "25/04/1977",
+};
+
+// Using forEach
+Object.entries(note2).forEach(([key, value]) => {
+  console.log(`${key}: ${value}`);
+});
+
+// Using a for loop
+for (let [key, value] of Object.entries(note2)) {
+  console.log(`${key}: ${value}`);
+}
+//
+//
+const arrValue = ["My", "name", "is", "Jack"];
+
+console.log(arrValue); // ["My", "name", "is", "Jack"]
+console.log(...arrValue); // My name is Jack
+//
+//
+// 1st
+let rivers = ["Nile", "Ganges", "Yangte"];
+let moreRivers = ["Danube", "Amazon"];
+[].push.apply(rivers, moreRivers);
+console.log(rivers);
+// 2nd
+rivers.push(...moreRivers);
+console.log(rivers);
+//
+//
+function sum(...args) {
+  return args.reduce((a, b) => a + b, 0);
+}
+console.log(sum(1, 2, 3, 4, 5)); // 15
+//
+//
+//**OBJELER ÖRNEKLER FEYZA HOCA */
+ogrenciNotlarList = [
+  { name: "Mustafa", notes: [70, 90, 60] },
+  { name: "Rabia", notes: [50, 70, 60] },
+  { name: "Hüseyin", notes: [40, 20, 30] },
+  { name: "Ahmet", notes: [80, 90, 100] },
+  { name: "İbrahim", notes: [30, 40, 55] },
+  { name: "Tuba", notes: [90, 100, 100] },
+];
+//*Her öğrencinin adını ve aldığı en yüksek notu yeni bir liste:
+//**1.Yol */
+// const enYuksekNotListesi = ({ name, notes }) => {
+//   return {
+//     ad: name,
+//     enNot: Math.max(...notes),
+//   };
+// };
+
+// console.log(ogrenciNotlarList.map((x) => enYuksekNotListesi(x)));
+//****2.yol****/
+
+const alınanEnYuksekNot = ogrenciNotlarList.map(({ name, notes }) => {
+  return {
+    name: name,
+    enYuksekNot: Math.max(...notes),
+  };
+});
+console.log(alınanEnYuksekNot);
+////Not ortalama bulup yeni bir listede döndüren fks
+const notOrtalaması = ogrenciNotlarList.map(({ name, notes }) => {
+  return {
+    name: name,
+    ortalama: (notes.reduce((a, b) => a + b, 0) / notes.length).toFixed(1),
+  };
+});
+console.log(notOrtalaması);
+///
+const studentList = [
+  {
+    id: 1,
+    name: "Mustafa",
+    username: "mustafa123",
+    email: "mustafa@example.com",
+    address: {
+      street: "Karanfil Sokak",
+      suite: "No: 10",
+      city: "Ankara",
+      zipcode: "06100",
+    },
+    phone: "0555-555-5555",
+    website: "mustafa.org",
+    school: {
+      name: "Ankara Üniversitesi",
+      grade: "A",
+      major: "Bilgisayar Mühendisliği",
+    },
+    languages: ["JavaScript", "Python", "Java"],
+  },
+  {
+    id: 3,
+    name: "Tuba",
+    username: "tuba123",
+    email: "tuba@example.com",
+    address: {
+      street: "Lale Sokak",
+      suite: "No: 15",
+      city: "İzmir",
+      zipcode: "35000",
+    },
+    phone: "0555-555-5557",
+    website: "tuba.org",
+    school: {
+      name: "Ege Üniversitesi",
+      grade: "A",
+      major: "Bilgisayar Bilimleri",
+    },
+    languages: ["JavaScript", "C++", "PHP"],
+  },
+  {
+    id: 4,
+    name: "Asım",
+    username: "asim123",
+    email: "asim@example.com",
+    address: {
+      street: "Menekşe Sokak",
+      suite: "No: 20",
+      city: "Antalya",
+      zipcode: "07000",
+    },
+    phone: "0555-555-5558",
+    website: "asim.org",
+    school: {
+      name: "Akdeniz Üniversitesi",
+      grade: "A",
+      major: "Bilgisayar Mühendisliği",
+    },
+    languages: ["JavaScript", "Go", "Kotlin"],
+  },
+  {
+    id: 5,
+    name: "Rabia",
+    username: "rabia123",
+    email: "rabia@example.com",
+    address: {
+      street: "Gül Sokak",
+      suite: "No: 25",
+      city: "Bursa",
+      zipcode: "16000",
+    },
+    phone: "0555-555-5559",
+    website: "rabia.org",
+    school: {
+      name: "Uludağ Üniversitesi",
+      grade: "B",
+      major: "Bilgisayar Bilimleri",
+    },
+    languages: ["Java", "Swift", "R"],
+  },
+  {
+    id: 6,
+    name: "Mehmet",
+    username: "mehmet123",
+    email: "mehmet@example.com",
+    address: {
+      street: "Çiçek Sokak",
+      suite: "No: 30",
+      city: "Ankara",
+      zipcode: "06100",
+    },
+    phone: "0555-555-5560",
+    website: "mehmet.org",
+    school: {
+      name: "Ankara Üniversitesi",
+      grade: "B",
+      major: "Yazılım Mühendisliği",
+    },
+    languages: ["Python", "C++", "Java"],
+  },
+  {
+    id: 7,
+    name: "İbrahim",
+    username: "ibrahim123",
+    email: "ibrahim@example.com",
+    address: {
+      street: "Akasya Sokak",
+      suite: "No: 35",
+      city: "İstanbul",
+      zipcode: "34000",
+    },
+    phone: "0555-555-5561",
+    website: "ibrahim.org",
+    school: {
+      name: "İstanbul Teknik Üniversitesi",
+      grade: "A",
+      major: "Bilgisayar Mühendisliği",
+    },
+    languages: ["JavaScript", "TypeScript", "Rust"],
+  },
+  {
+    id: 8,
+    name: "Ahmet",
+    username: "ahmet123",
+    email: "ahmet@example.com",
+    address: {
+      street: "Manolya Sokak",
+      suite: "No: 40",
+      city: "İzmir",
+      zipcode: "35000",
+    },
+    phone: "0555-555-5562",
+    website: "ahmet.org",
+    school: {
+      name: "Ege Üniversitesi",
+      grade: "A",
+      major: "Bilgisayar Bilimleri",
+    },
+    languages: ["JavaScript", "Python", "Scala"],
+  },
+  {
+    id: 9,
+    name: "Vusala",
+    username: "vusala123",
+    email: "vusala@example.com",
+    address: {
+      street: "Orkide Sokak",
+      suite: "No: 45",
+      city: "Antalya",
+      zipcode: "07000",
+    },
+    phone: "0555-555-5563",
+    website: "vusala.org",
+    school: {
+      name: "Akdeniz Üniversitesi",
+      grade: "B",
+      major: "Yazılım Mühendisliği",
+    },
+    languages: ["C#", "Java", "PHP"],
+  },
+];
+//
+// const newStudent = studentList.push({
+//   id: 2,
+//   name: "Hüseyin",
+//   username: "huseyin321",
+//   email: "huseyin@example.com",
+//   address: {
+//     street: "Papatya Caddesi",
+//     suite: "Daire: 5",
+//     city: "İstanbul",
+//     zipcode: "34000",
+//   },
+//   phone: "0555-555-5556",
+//   website: "huseyin.org",
+//   school: {
+//     name: "İstanbul Teknik Üniversitesi",
+//     grade: "B",
+//     major: "Yazılım Mühendisliği",
+//   },
+//   languages: ["C#", "Python", "Ruby"],
+// });
+// console.log(studentList);
+const newStudent = {
+  id: 2,
+  name: "Hüseyin",
+  username: "huseyin321",
+  email: "huseyin@example.com",
+  address: {
+    street: "Papatya Caddesi",
+    suite: "Daire: 5",
+    city: "İstanbul",
+    zipcode: "34000",
+  },
+  phone: "0555-555-5556",
+  website: "huseyin.org",
+  school: {
+    name: "İstanbul Teknik Üniversitesi",
+    grade: "B",
+    major: "Yazılım Mühendisliği",
+  },
+  languages: ["C#", "Python", "Ruby"],
+};
+//Yeni bir liste oluşturup ekleseydik
+const newStudentList = [...studentList, newStudent];
+console.log(newStudentList);
+console.log(studentList);
+//İsim,username,telefon
+///*******************
+const newList1 = newStudentList.map(
+  ({ name, username, email, address: { city, street } }) => ({
+    name,
+    username,
+    email,
+    city,
+    street,
+  })
+);
+console.log(newList1);
+//
+//yazılım muh. pazartesi arancak, bşlgisayar müh. çarşamba
+const pztList = newStudentList
+  .filter(({ school: { major } }) => major.startsWith("Yazılım"))
+  .map(({ name, phone }) => ({ name, phone }));
+//
+const carsList = newStudentList
+  .filter(({ school: { major } }) => major[0] === "B")
+  .map(({ name, phone }) => ({ name, phone }));
+console.log(carsList);
+//
+//
+//id si tek olanlara frontend mesajı, çift olanlarada backend mesajo gönderilecek
+// const reklamMetni = ({ id, name, phone }) => ({
+//   name: name,
+//   phone: phone,
+//   mesaj:
+//     id % 2 == 1
+//       ? `${name} frontend eğitimim için bizi ara`
+//       : `${name} backend eğitimi için bizi ara`,
+// });
+// const reklam = newStudentList.map((fulya) => reklamMetni(fulya));
+////
+//Yardımcı foks ile
+const reklamMetni = ({ id, name, phone }) => {
+  const metin = id % 2 === 0 ? "backend eğitimi" : "frontend eğitim";
+  return {
+    name: name,
+    phone: phone,
+    mesaj: metin,
+  };
+};
+console.log(newStudentList.map((x) => reklamMetni(x)));
+///
+//
+//
+const products = [
+  { name: "Product 1", price: 20, category: "Electronics" },
+  { name: "Product 2", price: 30, category: "Clothes" },
+  { name: "Product 3", price: 40, category: "Electronics" },
+  { name: "Product 4", price: 50, category: "Clothes" },
+  { name: "Product 5", price: 60, category: "Clothes" },
+  { name: "Product 6", price: 70, category: "Electronics" },
+  { name: "Product 7", price: 80, category: "Clothes" },
+  { name: "Product 8", price: 90, category: "Electronics" },
+];
+const categoriedListe=({category,price})=>{
+  const 
+}
