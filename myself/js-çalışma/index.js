@@ -783,7 +783,41 @@ const products = [
   { name: "Product 6", price: 70, category: "Electronics" },
   { name: "Product 7", price: 80, category: "Clothes" },
   { name: "Product 8", price: 90, category: "Electronics" },
+  { name: "Product 9", price: 90, category: "Electronics" },
+  { name: "Product 10", price: 10, category: "Foods" },
 ];
-const categoriedListe=({category,price})=>{
-  const 
-}
+
+const categorizedProducts = products.reduce((acc, item) => {
+  const category = item.category;
+
+  if (!acc[category]) {
+    acc[category] = [];
+  }
+
+  acc[category].push(item);
+  return acc;
+}, {});
+console.log(categorizedProducts);
+
+const categoriesWithAverage = Object.keys(categorizedProducts).map(
+  (category) => {
+    const categoryItemLength = categorizedProducts[category].length;
+
+    const sumOfPrices = categorizedProducts[category].reduce(
+      (acc, currentItem) => (acc += currentItem.price),
+      0
+    );
+    const categoryAverage = sumOfPrices / categoryItemLength;
+
+    return {
+      item: category,
+      average: categoryAverage,
+    };
+  }
+);
+
+const highPricedCategories = categoriesWithAverage.filter(
+  (item) => item.average > 50
+);
+
+console.log(highPricedCategories);
