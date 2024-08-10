@@ -1,0 +1,18 @@
+.contact-bgImg-container{
+    @include bgImg(100vh,$pathname5);
+    .nav{
+        height: 40vh;
+    }
+}
+.contact{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h2{
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+}

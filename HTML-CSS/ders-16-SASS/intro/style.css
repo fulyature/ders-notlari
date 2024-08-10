@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #bb66ff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: rgb(224, 212, 212);
+}
+
+header {
+  background-color: rgb(28, 28, 92);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+header img {
+  width: 80px;
+  border: 2px solid wheat;
+  padding: 5px;
+  border-radius: 10px;
+}
+header ul {
+  list-style: none;
+}
+header ul li {
+  display: inline-block;
+  padding: 0.5rem;
+}
+header ul li:hover {
+  text-decoration: underline;
+}
+header ul li a {
+  text-decoration: none;
+  color: wheat;
+}
+header ul li a:hover {
+  color: white;
+}
+
+.banner {
+  background-color: #8f53b1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  color: wheat;
+  line-height: 1.5rem;
+}
+.banner aside button {
+  background-color: pink;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid wheat;
+  margin-top: 1rem;
+  color: rgb(28, 28, 92);
+}
+.banner aside button:hover {
+  background-color: #101035;
+  color: wheat;
+  cursor: pointer;
+  transform: scale(0.8);
+}
+.banner img {
+  width: 30%;
+  max-width: 400px;
+  min-width: 200px;
+}
+
+.cards {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+.cards .card1 {
+  background-color: blue;
+  width: 25%;
+  height: 15rem;
+  border-radius: 1rem;
+  color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards .card2 {
+  background-color: yellow;
+  width: 25%;
+  height: 15rem;
+  border-radius: 1rem;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards .card3 {
+  background-color: purple;
+  width: 25%;
+  height: 15rem;
+  border-radius: 1rem;
+  color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards .card4 {
+  background-color: olive;
+  width: 25%;
+  height: 15rem;
+  border-radius: 1rem;
+  color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.articles {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+.articles .article1, .articles .article2 {
+  background-color: rgb(28, 28, 92);
+  width: 50%;
+  color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rem;
+}
+.articles .article2 {
+  background-color: yellow;
+  color: darkblue;
+}
+
+footer p {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+}
+footer .social-icons {
+  display: flex;
+  height: 10rem;
+}
+footer .social-icons .social1 {
+  width: 20%;
+  background-color: #1a1aff;
+  font-size: 1rem;
+  color: #990000;
+}
+footer .social-icons .social2 {
+  width: 20%;
+  background-color: #3333ff;
+  font-size: 2rem;
+  color: #55004e;
+}
+footer .social-icons .social3 {
+  width: 20%;
+  background-color: #4d4dff;
+  font-size: 3rem;
+  color: #0fa8a1;
+}
+footer .social-icons .social4 {
+  width: 20%;
+  background-color: #6666ff;
+  font-size: 4rem;
+  color: #dcacf1;
+}
+footer .social-icons .social5 {
+  width: 20%;
+  background-color: #8080ff;
+  font-size: 5rem;
+  color: #64c217;
+}
+
+/*# sourceMappingURL=style.css.map */

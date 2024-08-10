@@ -1,0 +1,196 @@
+*{
+margin:0;
+padding: 0;
+box-sizing: border-box;
+}
+
+//***variables
+
+$bg-color:#bb66ff;
+$font-family:Arial, Helvetica,sans-serif;
+$font-size:1.2rem;
+$nav-bg-color:rgb(28, 28, 92);
+$my-border:2px solid wheat;
+$bannerBgColor:#8f53b1;
+$btnColor:pink;
+$lightColor:wheat;
+$darkcolor:rgb(28, 28, 92);
+
+
+
+
+body{
+    background-color: $bg-color;
+    font-family: $font-family;
+    font-size: $font-size;
+    color: rgb(224, 212, 212);
+}
+
+
+header{
+    background-color: $nav-bg-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+
+    img{
+        width: 80px;
+        border: $my-border;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    ul{
+        list-style: none;
+      li{
+        display: inline-block;
+        padding: 0.5rem;
+        &:hover{
+            text-decoration: underline;
+        }
+        a{
+            text-decoration: none;
+            color:$lightColor;
+            &:hover{
+                color: white;
+            }
+        }
+      }
+    }
+}
+//****Banner****//
+.banner{
+    background-color: $bannerBgColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    color: $lightColor;
+    line-height: 1.5rem;
+
+
+
+    aside{
+        button{
+            background-color: $btnColor
+            ;
+            padding: 0.75rem 1.5rem;
+            border: $my-border;
+            margin-top:1rem ;
+            color: $darkcolor;
+            &:hover{
+                background-color: darken($darkcolor,10%);
+                color: $lightColor;
+                cursor: pointer;
+                transform: scale(0.8);
+            }
+        }
+    }
+    img{
+        width: 30%;
+        max-width: 400px;
+        min-width: 200px;
+    }
+}
+
+
+
+//**Cards
+
+//*****----Mixins---****///
+
+@mixin myBox($backColor, $color) {
+    background-color: $backColor;
+    width: 25%;
+    height: 15rem;
+    border-radius: 1rem;
+    color: $color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cards {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+  
+    .card1 {
+      @include myBox(blue, yellow);
+    }
+  
+    .card2 {
+      @include myBox(yellow, red);
+    }
+  
+    .card3 {
+      @include myBox(purple, orange);
+    }
+    .card4 {
+      @include myBox(olive, yellow);
+    }
+  }
+
+//**    aRTİCLES
+
+//  ----  Extend  ----
+
+.articles{
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    .article1{
+background-color: $darkcolor;
+width: 50%;
+color: $lightColor;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 10rem;
+    }
+    .article2{
+@extend .article1;
+background-color: yellow;
+color: darkblue;
+    }
+}
+//***Footer
+//**        for loop, if else       ****
+
+
+footer{
+    $dark :84;
+
+    p{
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        @if  $dark==1 {
+            background-color: gray;
+        } @else if $dark==2 {
+            background-color: red;
+        } @else {
+            background-color: orange;
+        }
+
+    }
+
+    .social-icons{
+        display: flex;
+        height: 10rem;
+        $textColor: #990000, #55004e, #0fa8a1, #dcacf1, #64c217;
+        
+        @for $i from 1 through 5 {
+            .social#{$i}{
+                width: 20%;
+                background-color: lighten(blue, $i * 5);
+                font-size: 1rem * $i;
+                color: nth($textColor, $i );
+            }
+        }
+    }
+}

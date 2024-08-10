@@ -452,7 +452,7 @@ function sumOfEven(a, b) {
   }
   return sum;
 }
-console.log(sumOfEven(1, 3));
+console.log(sumOfEven(1, 6));
 //
 //
 //13. soru Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
@@ -472,7 +472,7 @@ function evensAndOdds(a, b) {
   console.log(`The number of even are ${counteven}`);
   return counteven, countodd;
 }
-evensAndOdds(1, 3);
+evensAndOdds(1, 7);
 //
 //
 //14. soru Write a function which takes any number of arguments and return the sum of the arguments
@@ -603,7 +603,7 @@ function arrayOfHexaColors(num) {
     const hexChars = "0123456789ABCDEF";
     let hexNumber = "#";
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i <= 6; i++) {
       const randomIndex = Math.floor(Math.random() * hexChars.length);
       hexNumber += hexChars[randomIndex];
     }
@@ -638,3 +638,40 @@ console.log(arrayOfRgbColors(9));
 //
 //
 //5. soru Write a function convertHexaToRgb which converts hexa color to rgb and it returns an rgb color.s
+//
+///
+//
+//7. soru Write a function generateColors which can generate any number of hexa or rgb colors.
+
+function generateColors(a, b) {
+  function hexa() {
+    const hexChars = "0123456789ABCDEF";
+    let hexNumber = "#";
+    for (let i = 1; i <= 6; i++) {
+      const random = Math.floor(Math.random() * hexChars.length);
+      hexNumber += hexChars[random];
+    }
+    return hexNumber;
+  }
+
+  function rgb() {
+    const r = Math.floor(Math.random() * 257);
+    const g = Math.floor(Math.random() * 257);
+    const b = Math.floor(Math.random() * 257);
+
+    return `rgb(${r}.${g},${b})`;
+  }
+
+  const colors = [];
+  for (let i = 0; i < b; i++) {
+    if (a == "hexa") {
+      colors.push(hexa());
+    } else if (a == "rgb") {
+      colors.push(rgb());
+    }
+  }
+  return colors;
+}
+
+console.log(generateColors("hexa", 7));
+console.log(generateColors("rgb", 2));

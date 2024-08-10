@@ -1,0 +1,30 @@
+@use "./abstracts/mixins" ;
+@use"./abstracts/variables" ;
+@use "./base/reset";
+
+@use "./pages/about" ;
+@use "./pages/contact" ;
+@use "./pages/home" ;
+@use
+ "./pages/projects";
+
+@use "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css";
+
+
+@import "./components/footer" , "./components/nav" ,"./components/responsive";
+
+
+body{
+    font-family: $font-family;
+    background-color: $primary-color;
+    height: 100vh;
+    line-height: 1;
+    color: $text-color;
+}
+a{
+    color: $text-color;
+    text-decoration: none;
+}
+h1,h2,h3{
+    font-weight: 400;
+}
