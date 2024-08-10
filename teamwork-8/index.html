@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1 class="text-center m-3 text-warning fw-light">My Wallet App</h1>
+    <main>
+      <!-- Harcama Formu Bölümü -->
+      <section class="m-5 rounded-3 input-list" id="expenses">
+        <h3 class="text-center m-3">Harcama Formu</h3>
+        <div class="container mt-4">
+          <div class="row">
+            <!-- Tarih Input (6 sütun) -->
+            <div class="col-md-6 mb-4 tarih">
+              <div class="form-group">
+                <label for="dateInput">Tarih</label>
+                <input type="date" id="dateInput" class="form-control" />
+              </div>
+            </div>
+            <!-- Harcama Miktarı Input (6 sütun) -->
+            <div class="col-md-6 mb-4 miktar">
+              <div class="form-group">
+                <label for="amountInput">Harcama Miktarı</label>
+                <input
+                  type="number"
+                  id="amountInput"
+                  placeholder="1000 $"
+                  class="form-control"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Harcama Alanı Input (12 sütun) -->
+            <div class="col-md-12 alan">
+              <div class="form-group">
+                <label for="areaInput">Harcama Alanı</label>
+                <input
+                  type="text"
+                  id="areaInput"
+                  class="form-control"
+                  placeholder="Kira,Fatura,Kredi Kartı"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center justify-content-center kirmizi">
+            <input
+              type="button"
+              id="saveButton"
+              value="Kaydet"
+              class="bg-danger text-white rounded-3 p-3 m-4 center-div"
+            />
+          </div>
+        </div>
+      </section>
+      <hr />
+      <!-- Gelir Bölümü -->
+      <div id="income" class="m-4 p-4 gelir">
+        <input
+          type="number"
+          id="incomeInput"
+          class="col-md-10 text-center"
+          placeholder="Gelir giriniz"
+        />
+        <input
+          type="button"
+          id="addIncomeButton"
+          value="Ekle"
+          class="bg-success text-white p-1 rounded-2 col-md-1 yesil"
+        />
+      </div>
+      <hr />
+      <!-- Tablo ve Toplamlar Bölümü -->
+      <section>
+        <div class="container mt-4">
+          <table id="expensesTable" class="table table-bordered text-center">
+            <thead>
+              <tr class="tablo">
+                <th class="fw-bold">Tarih</th>
+                <th class="fw-bold">Harcama Alanı</th>
+                <th class="fw-bold">Miktar ($)</th>
+                <th class="fw-bold">İşlem</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Yeni satırlar buraya eklenecek -->
+            </tbody>
+          </table>
+        </div>
+        <div class="container mt-4">
+          <table class="table table-bordered text-center">
+            <tbody class="fw-bold total">
+              <tr>
+                <td>Geliriniz ($) :</td>
+                <td id="totalIncome">0</td>
+              </tr>
+              <tr>
+                <td>Gideriniz ($) :</td>
+                <td id="totalExpenses">0</td>
+              </tr>
+              <tr>
+                <td>Kalan ($) :</td>
+                <td id="remainingBalance">0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="align-items-center justify-content-center d-flex">
+          <input
+            type="button"
+            value="Bilgileri Temizle"
+            class="bg-secondary text-white p-2 rounded-2 m-4 gri"
+          />
+        </div>
+      </section>
+    </main>
+    <script src="TeamLead.js"></script>
+  </body>
+</html>
