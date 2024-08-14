@@ -1,0 +1,18 @@
+.container {
+  width: 25rem;
+
+  border: 2px solid rgb(3, 100, 138);
+  border-radius: 5px;
+  background-color: rgba(0, 187, 255, 0.403);
+  margin-top: 10rem;
+  height: 100%;
+  padding: 5rem;
+}
+.cardDiv {
+}
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
