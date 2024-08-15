@@ -1,2 +1,3 @@
 //? MAIN.JS
-console.log("***** main *****")
+
+console.log("***** main *****");
